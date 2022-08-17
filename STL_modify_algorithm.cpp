@@ -47,9 +47,9 @@ public:
 //#define blk1
 //#define blk2
 //#define blk3
-//#define blk4
+#define blk4
 //#define blk5
-#define blk6
+//#define blk6
 #define blk7
 #define blk8
 #define blk9
@@ -250,21 +250,19 @@ int main() {
 
 
 #ifdef blk6
+	/*
+	std::accumulate
+		This will return the accumulated result back
+		It has two versions:
 
-#endif // blk6
-	/* 
-		std::accumulate
-			This will return the accumulated result back
-			It has two versions:
-			
-			T accumulate(InputIterator f, InputIterator l, T init)
+		T accumulate(InputIterator f, InputIterator l, T init)
 
-			T accumulate( InputIt first, InputIt last, T init, BinaryOperation op );
-			
-			the first two again are the range
-			the third is the initial accumulated value
-			The forth must be a binary predicate
-	*/
+		T accumulate( InputIt first, InputIt last, T init, BinaryOperation op );
+
+		the first two again are the range
+		the third is the initial accumulated value
+		The forth must be a binary predicate
+*/
 
 
 	std::vector<int> int_vec{ 10,15,5,20,25 };
@@ -273,6 +271,8 @@ int main() {
 
 	int Sum = std::accumulate(int_vec.begin(), int_vec.end(), 0);
 	std::cout << "The sum is: " << Sum << std::endl;
+#endif // blk6
+
 
 
 }
